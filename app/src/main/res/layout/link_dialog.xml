@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="370dp"
+    android:background="#fff3f3f3"
+    android:id="@+id/l_artist_link">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:id="@+id/image_frame">
+
+        <com.etsy.android.grid.StaggeredGridView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/SG_view"
+            android:layout_width = "300dp"
+            android:layout_height = "240dp"
+            app:item_margin = "6dp"
+            app:column_count = "2"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top" />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/artist_image"
+            android:scaleType="centerCrop"
+            android:layout_gravity="top" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/t_artist_name"
+            android:textColor="#ffffffff"
+            android:textStyle="bold"
+            android:layout_alignBottom="@+id/artist_image"
+            android:background="#66000000"
+            android:autoText="false"
+            android:typeface="monospace"
+            android:layout_gravity="bottom"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit."
+            android:id="@+id/t_attribution"
+            android:layout_alignBottom="@+id/artist_image"
+            android:layout_alignRight="@+id/artist_image"
+            android:textColor="#ffececec"
+            android:typeface="normal"
+            android:textStyle="italic"
+            android:singleLine="false"
+            android:textSize="8dp"
+            android:padding="8dp"
+            android:layout_gravity="bottom|right" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_popup_close"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:layout_alignTop="@+id/image_frame"
+        android:layout_alignRight="@+id/image_frame" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/bottom_panel"
+        android:layout_below="@+id/image_frame"
+        android:background="#ff373737" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_frame"
+        android:id="@+id/l_link_list"
+        android:paddingLeft="16dp"
+        android:paddingBottom="8dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_centerHorizontal="true"></LinearLayout>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Powered by the Echo Nest"
+        android:id="@+id/t_echo_nest"
+        android:layout_below="@+id/l_link_list"
+        android:gravity="center"
+        android:textColor="#8f363c6b" />
+
+</RelativeLayout>

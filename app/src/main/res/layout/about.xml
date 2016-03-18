@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="App Info."
+        android:id="@+id/textView2"
+
+        android:textStyle="bold"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:textColor="#ff000000" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Music Lamb Alpha. by Hyun-Yi Kim\nE-mail. hyunyi.kim@gmail.com\nHomepage. hyunyi.egloos.com"
+        android:id="@+id/textView3"
+
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:autoLink="web|email"
+        android:elegantTextHeight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thanks to"
+        android:id="@+id/textView4"
+        android:textStyle="bold"
+
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:textColor="#ff000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Echo Nest (the.echonest.com)\nLyric Wikia (lyrics.wikia.com)\nloopj (android-async-http)\netsy (AndroidStaggeredGrid)\nnostra13 (Android-Universal-Image-Loader)"
+        android:id="@+id/textView5"
+
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:autoText="false"
+        android:autoLink="web"
+        android:elegantTextHeight="true" />
+
+</LinearLayout>

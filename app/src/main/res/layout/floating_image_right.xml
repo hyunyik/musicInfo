@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="215dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/floating_view_layout"
+    android:gravity="right">
+
+    <RelativeLayout
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/l_musicInfo"
+        android:background="@drawable/msg_balloon_right"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="-3dp"
+        android:layout_toLeftOf="@+id/lamb_body">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:id="@+id/bt_musicInfo_close"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_marginTop="-4dp"
+            android:layout_toRightOf="@+id/album_info"
+            android:layout_alignBottom="@+id/album_info" />
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Album"
+            android:id="@+id/album_info"
+            android:textColor="#ff000000"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textStyle="italic"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Song"
+            android:id="@+id/song_info"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:width="150dp"
+            android:textColor="#ff000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/album_info" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/song_info"
+            android:id="@+id/l_artist_list"
+            android:layout_alignRight="@+id/song_info">
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="182dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/l_musicInfo"
+        android:background="@drawable/control_box"
+        android:id="@+id/control_box"
+        android:layout_alignLeft="@+id/l_musicInfo"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp">
+
+        <com.andexert.library.RippleView
+            android:id="@+id/l_pre_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rv_color="@android:color/black"
+            app:rv_centered = "true"
+            android:layout_toLeftOf="@+id/l_start_player"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b_pre_player"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:background="#00ffffff"
+                    android:scaleType="fitCenter"
+                    />
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            android:id="@+id/l_start_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rv_color="@android:color/black"
+            app:rv_centered = "true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/b_start_player"
+                android:src="@android:drawable/ic_media_play"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                />
+        </com.andexert.library.RippleView>
+
+
+        <com.andexert.library.RippleView
+            android:id="@+id/l_next_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rv_color="@android:color/black"
+            app:rv_centered = "true"
+            android:layout_toRightOf="@+id/l_start_player"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/b_next_player"
+                android:src="@android:drawable/ic_media_next"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                />
+        </com.andexert.library.RippleView>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="55dp"
+        android:id="@+id/lamb_body"
+        android:src="@drawable/lamb_right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignWithParentIfMissing="false" />
+
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:id="@+id/bt_lyrics"
+        android:visibility="visible"
+        android:src="@drawable/s_new_lyric_balloon_right"
+        android:layout_alignBottom="@+id/lamb_foot"
+        android:layout_toLeftOf="@+id/lamb_body"
+        android:paddingTop="2dp" />
+
+    <ImageView
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:id="@+id/bt_musicInfo_open"
+        android:visibility="visible"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/s_new_info_balloon_right"
+        android:layout_alignTop="@+id/lamb_body"
+        android:paddingBottom="2dp"
+        android:layout_toLeftOf="@+id/lamb_body" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:id="@+id/lamb_foot"
+        android:src="@drawable/s_new_lamb_foot_right"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="-3dp"
+        android:layout_alignRight="@+id/lamb_body" />
+
+    <FrameLayout
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_below="@+id/lamb_foot"
+        android:layout_marginLeft="0dp"
+        android:id="@+id/control_ballon"
+        android:layout_toLeftOf="@+id/lamb_body"
+        android:layout_marginRight="-7dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/control_ballon_background"
+            android:layout_gravity="center"
+            android:src="@drawable/control_background_right" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/control_ballon_button"
+            android:src="@drawable/control_play"
+            android:layout_gravity="center"
+            android:paddingTop="9dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="6dp" />
+    </FrameLayout>
+
+</RelativeLayout>

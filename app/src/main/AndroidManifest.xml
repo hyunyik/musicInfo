@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.egloos.hyunyi.musicinfo" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LinkPopUp"
+            android:theme="@android:style/Theme.Dialog"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"
+            android:clearTaskOnLaunch="true" >
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MainService"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".musicInfoBCR"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.music.playstatechanged" />
+                <action android:name="com.android.music.metachanged" />
+                <action android:name="com.spotify.mobile.android.metadatachanged" />
+                <action android:name="com.spotify.mobile.android.playbackstatechanged" />
+                <action android:name="com.spotify.music.metadatachanged" />
+                <action android:name="com.spotify.music.playbackstatechanged" />
+                <action android:name="com.sonyericsson.media.infinite.ACTION_GET_DETAILS" />
+
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_PLAYBACK_PLAY"/>
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_PLAYBACK_PAUSE"/>
+                <action android:name="com.sonyericsson.music.TRACK_COMPLETED"/>
+                <action android:name="com.sonyericsson.music.metachanged"/>
+                <action android:name="com.sonyericsson.music.playbackcomplete"/>
+                <action android:name="com.sonyericsson.music.playstatechanged"/>
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_TRACK_STARTED"/>
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_PAUSED"/>
+            </intent-filter>
+
+        </receiver>
+
+
+    </application>
+
+</manifest>
